@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
      
-      <div className="md:hidden absolute top-6 left-6 z-100">
+      <div className="md:hidden absolute top-6 right-6 z-100">
         <button onClick={toggleSidebar} className="text-white p-2">
           {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
