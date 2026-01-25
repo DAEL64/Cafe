@@ -26,15 +26,14 @@ const Header = () => {
         alt="logo"
         className="absolute md:hidden z-50 top-5 left-5"
       />
-      <div className="h-fit md:flex relative md:absolute inset-0 px-12.5 text-white top-0 z-50 pt-12.5 hidden w-full justify-between items-center">
+      <div className="h-fit md:flex relative md:absolute inset-0 px-12.5 text-white top-0 z-50 pt-10 hidden w-full justify-between items-center">
         <div className="gap-15 flex justify-between items-center">
           <div className={`${CormorantGaramond.className} font-bold`}>
             <Link
               href="/"
               className="text-[28px] transition-all flex items-center gap-4 "
             >
-              La Crosta
-              <Image src={logo} alt="logo" />
+              <Image src={logo} alt="logo" className="w-25" />
             </Link>
           </div>
 

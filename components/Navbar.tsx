@@ -37,9 +37,9 @@ const Navbar = () => {
             <Image src={logo} alt="logo" />
           </div>
           <Link href="/" onClick={toggleSidebar}>Home</Link>
-          <Link href="/Menu" onClick={toggleSidebar}>Menu</Link>
-          <Link href="/About" onClick={toggleSidebar}>About</Link>
-          <Link href="/Contact" onClick={toggleSidebar}>Contact</Link>
+          <Link href="/menus/all" onClick={toggleSidebar}>Menu</Link>
+          <Link href="/about" onClick={toggleSidebar}>About</Link>
+          <Link href="/contact" onClick={toggleSidebar}>Contact</Link>
         </div>
       </div>
     </>

@@ -24,7 +24,7 @@ const MenuLayout = ({ children }: { children: React.ReactNode }) => {
       <Image src={menuImage} alt="menu background" className="w-full" />
 
       <div className="px-5 sm:px-15 md:px-30 w-full pt-30">
-        <ul className="flex gap-8.5">
+        <ul className="flex gap-8.5 overflow-x-scroll 2xl:overflow-x-hidden pb-3 2xl:pb-0">
           {categories.map((item) => {
             const isActive = pathname === item.href;
 
