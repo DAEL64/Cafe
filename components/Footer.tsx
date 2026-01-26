@@ -26,7 +26,7 @@ const Footer = () => {
               <span className="text-2xl font-semibold tracking-wide uppercase">
                 La Crosta
               </span>
-              <Image src={logo} alt="La Crosta logo" width={30} height={30} />
+              <Image src={logo} alt="La Crosta logo" width={70} height={70} />
             </div>
             <div className="flex flex-col items-center md:items-start space-y-2">
               <p className="text-sm italic tracking-wide text-gray-500">
