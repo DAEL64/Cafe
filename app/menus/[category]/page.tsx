@@ -6,9 +6,9 @@ import { Cormorant_Garamond } from "next/font/google";
 const keyMapping: Record<string, string> = {
   all: "all",
   pizzas: "Pizzas",
-  sides: "Sides",
-  "hot-drinks": "Coffees",
-  "cold-drinks": "Drinks",
+  sides: "Sides", 
+  coldDrinks: "Drinks",
+  hotDrinks: "Coffees",
   desserts: "Desserts",
   milkshakes: "Milkshakes",
 };
@@ -20,11 +20,9 @@ const CormorantGaramond = Cormorant_Garamond({
 export default async function CategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: { category: string };
 }) {
-  const resolvedParams = await params;
-  const category = resolvedParams.category;
-
+  const { category } = await params;
   const { menu } = menuData;
 
   const dataKey = keyMapping[category];
@@ -42,9 +40,7 @@ export default async function CategoryPage({
   return (
     <div className="w-full px-5 sm:px-15 md:px-30 pb-20">
       `
-      <div
-        className={`${CormorantGaramond.className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10`}
-      >
+      <div className={`${CormorantGaramond.className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10`}>
         {displayItems.map((item) => (
           <div
             key={item.id}

@@ -5,7 +5,7 @@ import background from "@/public/assets/mainImage.jpg";
 import Link from "next/link";
 
 import { Cormorant_Garamond } from "next/font/google";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ChefHat } from "lucide-react";
 
 const CormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -19,19 +19,25 @@ const MainBackground = () => {
           src={background}
           alt="background image"
           priority
-          className="z-10 absolute top-0 w-full h-screen object-cover brightness-85"
+          className="z-10 absolute top-0 w-full h-screen object-cover brightness-80"
         />
-        <div className="absolute flex flex-col z-50 items-center gap-20 2xl:gap-39 top-50">
-          <div className="flex flex-col justify-between gap-10">
+        <div className="absolute flex flex-col z-50 items-center gap-39 md:gap-20 top-50">
+          <div className="flex flex-col justify-between items-center">
+            <div className="flex justify-center items-center text-white w-fit border border-white/20 bg-white/10 p-2 rounded-full">
+              <span className="flex items-center gap-2">
+                <ChefHat width={24} />
+                EST. 2026
+              </span>
+            </div>
             <div
-              className={`${CormorantGaramond.className} sm:flex sm:flex-col items-center justify-center font-bold text-white lg:text-[110px] md:text-[60px] sm:text-[50px] text-[30px]`}
+              className={`${CormorantGaramond.className} sm:flex sm:flex-col items-center justify-center font-bold text-white lg:text-[110px] md:text-[80px] sm:text-[70px] text-[30px]`}
             >
-              <span className="flex justify-center">Art on a plate</span>
-              <span className="leading-25 hidden md:block">
+              <span className="flex justify-center leading-35">Art on a plate</span>
+              <span className="hidden md:block">
                 soul in every bite
               </span>
             </div>
-            <div className="md:flex flex-col not-last:font-medium lg:text-[20px] sm:text-[16px]  text-[#D1D2D0] items-center justify-center">
+            <div className="md:flex flex-col not-last:font-medium lg:text-[20px] sm:text-[16px]  text-[#e6e9e4] items-center justify-center">
               <span className="hidden text-center justify-center md:block">
                 "Making your mornings brighter and your afternoons more social."
               </span>

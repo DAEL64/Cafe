@@ -42,7 +42,7 @@ const MainPage = () => {
                     {categoryLabels[key]?.label || key}
                   </span>
                   <Link
-                    href={`/menus/${categoryLabels[key]?.slug}`}
+                    href={`/menus/${categoryLabels[key]?.slug || key.toLowerCase()}`}
                     className="cursor-pointer hover:underline flex items-center gap-1 text-lg"
                   >
                     see more
@@ -65,14 +65,14 @@ const MainPage = () => {
                       />
                     </div>
                     <div className="flex gap-6.25 w-7/10 flex-col py-5 items-center">
-                      <p className="text-2xl text-gray-600">
+                      <p className="text-3xl text-gray-600">
                         ₾{item.price.toFixed(2)}
                       </p>
 
-                      <span className="text-[24px] font-medium">
+                      <span className="text-[32px] font-semibold">
                         {item.title}
                       </span>
-                      <span className="flex text-center">
+                      <span className="flex text-center text-lg">
                         {item.description}
                       </span>
                     </div>

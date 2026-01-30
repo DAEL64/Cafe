@@ -21,17 +21,17 @@ const Footer = () => {
           
           <div className="flex flex-col items-center md:items-start space-y-4">
             <div className="flex gap-3 justify-center items-center">
-              <span className="text-2xl font-semibold tracking-wide uppercase">
+              <span className="text-4xl font-semibold tracking-wide uppercase">
                 Café
               </span>
             </div>
             <div className="flex flex-col items-center md:items-start space-y-2">
-              <p className="text-sm italic tracking-wide text-gray-500">
+              <p className="text-xl italic tracking-wide text-gray-500">
                 Authentic Dining Experience
               </p>
               <a 
                 href="tel:+995585888846" 
-                className="flex items-center gap-2 text-sm hover:text-[#A04501] transition-colors duration-300"
+                className="flex items-center gap-2 text-md hover:text-[#A04501] transition-colors duration-300"
               >
                 <Phone size={14} />
                 +995 585 88 88 46
@@ -40,8 +40,8 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center space-y-4">
-            <h4 className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400">Navigation</h4>
-            <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm uppercase tracking-widest">
+            <h4 className="text-lg uppercase tracking-[0.2em] font-bold text-gray-400">Navigation</h4>
+            <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-md uppercase tracking-widest">
               <Link href="/about" className="hover:text-[#A04501] transition-colors border-b border-transparent hover:border-[#A04501]">
                 About
               </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-center md:items-end space-y-6">
             <div className="flex flex-col items-center md:items-end space-y-2">
-              <p className="text-sm font-medium italic underline underline-offset-4 decoration-[#D3CCC9]">
+              <p className="text-md font-medium italic underline underline-offset-4 decoration-[#D3CCC9]">
                 Open Daily: 10:00 AM - 11:00 PM
               </p>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-gray-400">
+        <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] uppercase tracking-[0.3em] text-gray-400">
           <p>© 2024 Café. All Rights Reserved.</p>
           <p className="hidden md:block">Gourmet Italian Cuisine</p>
         </div>
