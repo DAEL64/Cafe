@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { Cormorant_Garamond } from "next/font/google";
 
-import logo from "@/public/assets/logo.png"
 import Image from "next/image";
 
 const CormorantGaramond = Cormorant_Garamond({
@@ -20,7 +19,6 @@ const Navbar = () => {
 
   return (
     <>
-     
       <div className="md:hidden absolute top-6 right-6 z-100">
         <button onClick={toggleSidebar} className="text-white p-2">
           {isOpen ? <X size={32} /> : <Menu size={32} />}
@@ -32,14 +30,24 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
-        <div className={`${CormorantGaramond.className} flex flex-col items-center justify-center h-full gap-8 text-white text-3xl`}>
-          <div>
-            <Image src={logo} alt="logo" />
-          </div>
-          <Link href="/" onClick={toggleSidebar}>Home</Link>
-          <Link href="/menus/all" onClick={toggleSidebar}>Menu</Link>
-          <Link href="/about" onClick={toggleSidebar}>About</Link>
-          <Link href="/contact" onClick={toggleSidebar}>Contact</Link>
+        <div className={`${CormorantGaramond.className} font-bold text-5xl text-white flex w-full justify-center pt-15`}>
+          Café
+        </div>
+        <div
+          className={`${CormorantGaramond.className} flex flex-col items-center justify-center h-full gap-8 text-white text-3xl`}
+        >
+          <Link href="/" onClick={toggleSidebar}>
+            Home
+          </Link>
+          <Link href="/menus/all" onClick={toggleSidebar}>
+            Menu
+          </Link>
+          <Link href="/about" onClick={toggleSidebar}>
+            About
+          </Link>
+          <Link href="/contact" onClick={toggleSidebar}>
+            Contact
+          </Link>
         </div>
       </div>
     </>

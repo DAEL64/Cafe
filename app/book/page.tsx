@@ -8,7 +8,7 @@ const cormorant = Cormorant_Garamond({
 const BookTablePage = () => {
   return (
     <div className={`${cormorant.className} min-h-screen pt-40 pb-20 px-5`}>
-      {/* Header Section */}
+        
       <div className="max-w-3xl mx-auto text-center mb-16">
         <span className="text-[#A04501] uppercase tracking-[0.3em] text-sm font-semibold">Reservations</span>
         <h1 className="text-5xl md:text-6xl mt-4 mb-6">Secure Your Table</h1>
@@ -17,11 +17,9 @@ const BookTablePage = () => {
         </p>
       </div>
 
-      {/* Booking Form Card */}
       <div className="max-w-4xl mx-auto bg-white border border-[#D3CCC9] rounded-[40px] p-8 md:p-16 shadow-sm">
         <form className="flex flex-col gap-8">
           
-          {/* Row 1: Name & Email */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-2">
               <label className="text-sm uppercase tracking-wider text-gray-500 ml-2">Full Name</label>
@@ -41,7 +39,6 @@ const BookTablePage = () => {
             </div>
           </div>
 
-          {/* Row 2: Date, Time, Guests */}
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-2">
               <label className="text-sm uppercase tracking-wider text-gray-500 ml-2">Date</label>

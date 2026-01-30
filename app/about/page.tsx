@@ -26,7 +26,7 @@ const AboutPage = () => {
           <span className="text-[#A04501] font-semibold tracking-widest uppercase text-sm">Our Philosophy</span>
           <h2 className="text-4xl md:text-5xl mt-4 mb-6 leading-tight">Beyond the Traditional Neapolitan</h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            At La Crosta, we believe the crust isn't just a vessel for toppings—it is the main event. 
+            At Café, we believe the crust isn't just a vessel for toppings—it is the main event. 
             Named after the Italian word for "the crust," our pizzeria was born from a singular 
             obsession: achieving the perfect 72-hour cold-fermented dough.
           </p>

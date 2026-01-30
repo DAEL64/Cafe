@@ -1,4 +1,3 @@
-import logo from "@/public/assets/logo.png";
 import tiktok from "@/public/assets/tiktok-icon.png"
 
 import { Facebook, Instagram, Phone } from "lucide-react"; // Added Phone
@@ -20,13 +19,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-start">
           
-          {/* 1. Brand & Contact Section */}
           <div className="flex flex-col items-center md:items-start space-y-4">
             <div className="flex gap-3 justify-center items-center">
               <span className="text-2xl font-semibold tracking-wide uppercase">
-                La Crosta
+                Café
               </span>
-              <Image src={logo} alt="La Crosta logo" width={70} height={70} />
             </div>
             <div className="flex flex-col items-center md:items-start space-y-2">
               <p className="text-sm italic tracking-wide text-gray-500">
@@ -65,13 +62,13 @@ const Footer = () => {
             </div>
             
             <div className="flex gap-5">
-              <Link target="_blank" href="https://www.instagram.com/pizzeria_lacrosta/" className="transform hover:-translate-y-1 transition-all">
+              <Link target="_blank" href="https://www.instagram.com/hyperjumpweb/" className="transform hover:-translate-y-1 transition-all">
                 <Instagram size={20} />
               </Link>
-              <Link target="_blank" href="https://www.facebook.com/p/La-Crosta-%E1%83%9A%E1%83%90-%E1%83%99%E1%83%A0%E1%83%9D%E1%83%A1%E1%83%A2%E1%83%90-61573035490565/" className="transform hover:-translate-y-1 transition-all">
+              <Link target="_blank" href="https://www.instagram.com/hyperjumpweb/" className="transform hover:-translate-y-1 transition-all">
                 <Facebook size={20} />
               </Link>
-              <Link target="_blank" href="https://www.tiktok.com/@pizzeria_lacrosta" className="transform hover:-translate-y-1 transition-all">
+              <Link target="_blank" href="https://www.instagram.com/hyperjumpweb/" className="transform hover:-translate-y-1 transition-all">
                 <Image src={tiktok} alt="tiktok icon" className="w-5" />
               </Link>
             </div>
@@ -79,7 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-gray-400">
-          <p>© 2024 La Crosta. All Rights Reserved.</p>
+          <p>© 2024 Café. All Rights Reserved.</p>
           <p className="hidden md:block">Gourmet Italian Cuisine</p>
         </div>
       </div>

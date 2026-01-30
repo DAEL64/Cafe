@@ -2,7 +2,6 @@ import { Cormorant_Garamond } from "next/font/google";
 
 import Image from "next/image";
 import phone from "@/public/assets/ion_call.png";
-import logo from "@/public/assets/logo.png";
 
 import Link from "next/link";
 
@@ -14,26 +13,23 @@ const Header = () => {
   const navigation = [
     { label: "Home", url: "/" },
     { label: "Menus", url: "/menus/all" },
-    { label: "Blog", url: "/blog" },
     { label: "About", url: "/about" },
     { label: "Contact", url: "/contact" },
   ];
 
   return (
     <>
-      <Image
-        src={logo}
-        alt="logo"
-        className="absolute md:hidden z-50 top-5 left-5"
-      />
+      <div
+        className={`${CormorantGaramond.className} font-bold absolute md:hidden text-white text-2xl flex items-center z-50 top-5 left-5`}
+      >Café</div>
       <div className="h-fit md:flex relative md:absolute inset-0 px-12.5 text-white top-0 z-50 pt-10 hidden w-full justify-between items-center">
-        <div className="gap-15 flex justify-between items-center">
+        <div className="gap-20 flex justify-between items-center">
           <div className={`${CormorantGaramond.className} font-bold`}>
             <Link
               href="/"
-              className="text-[28px] transition-all flex items-center gap-4 "
+              className="text-[36px] transition-all flex gap-4 "
             >
-              <Image src={logo} alt="logo" className="w-25" />
+              Café
             </Link>
           </div>
 
