@@ -1,0 +1,86 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "menus": "Menus",
+    "about": "About",
+    "contact": "Contact",
+    "book_table": "Book Table",
+    "logo": "Café"
+  },
+  "Index": {
+    "title": "HyperJump - Cafe Demo Website"
+  },
+  "Menu": {
+    "discover": "Discover",
+    "title": "Our Dining Menu",
+    "see_more": "see more",
+    "curated": "Curated",
+    "signature": "Signature",
+    "description_template": "Our {category} are curated to evoke a sense of home, reimagined through modern technique and local sourcing.",
+    "categories": {
+      "Pizzas": "Pizzas",
+      "Sides": "Sides",
+      "Coffees": "Hot Drinks",
+      "Drinks": "Cold Drinks",
+      "Desserts": "Desserts",
+      "Milkshakes": "Milkshakes"
+    },
+    "categories": {
+      "all": "All",
+      "Pizzas": "Pizzas",
+      "Sides": "Sides",
+      "Drinks": "Cold Drinks",
+      "Coffees": "Hot Drinks",
+      "Desserts": "Desserts",
+      "Milkshakes": "Milkshakes"
+    }
+  },
+  "About": {
+    "hero_title": "The Secret is in the Science",
+    "hero_sub": "Crafting the perfect crust since 2018",
+    "philosophy_tag": "Our Philosophy",
+    "philosophy_title": "Beyond the Traditional Neapolitan",
+    "philosophy_p1": "At Café, we believe the crust isn't just a vessel for toppings—it is the main event. Named after the Italian word for \"the crust,\" our pizzeria was born from a singular obsession: achieving the perfect 72-hour cold-fermented dough.",
+    "philosophy_p2": "By combining high-hydration techniques with traditional wood-fired methods, we create a crust that is airy, charred, and rich with complex flavor notes.",
+    "flour_title": "00 Flour",
+    "flour_desc": "Sourced directly from the Caputo mills in Naples for that signature silky texture.",
+    "time_title": "72 Hours",
+    "time_desc": "The time we give our dough to develop its unique \"leopard spotting\" and light airiness.",
+    "temp_title": "900 Degrees",
+    "temp_desc": "The exact temperature of our oven to lock in moisture while creating a crispy exterior.",
+    "cta_title": "Ready to taste the difference?",
+    "cta_button": "View Our Menu"
+  },
+  "Booking": {
+    "tag": "Reservations",
+    "title": "Secure Your Table",
+    "sub": "Join us for an authentic wood-fired experience. For parties larger than 8, please call us directly.",
+    "labels": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "date": "Date",
+      "time": "Time",
+      "guests": "Guests",
+      "requests": "Special Requests"
+    },
+    "placeholders": {
+      "requests": "Allergies, anniversaries, or seating preferences..."
+    },
+    "button": "Confirm Reservation",
+    "policy": "By clicking confirm, you agree to our 15-minute grace period policy."
+  },
+  "Hero": {
+    "est": "EST. 2026",
+    "title_top": "Art on a plate",
+    "title_bottom": "soul in every bite",
+    "subtext": "Making your mornings brighter and your afternoons more social.",
+    "cta": "Explore Our Menu"
+  },
+  "Footer": {
+    "tagline": "Authentic Dining Experience",
+    "nav_title": "Navigation",
+    "hours": "Open Daily: 10:00 AM - 11:00 PM",
+    "rights": "© 2024 Café. All Rights Reserved.",
+    "sub_rights": "Gourmet Italian Cuisine"
+  }
+}

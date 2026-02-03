@@ -5,18 +5,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import menuImage from "@/public/assets/menuImage.png";
 import { ArrowDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const MenuLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
+  const t = useTranslations("Menu.categories");
 
   const categories = [
-    { label: "All", href: "/menus/all" },
-    { label: "Pizzas", href: "/menus/pizzas" },
-    { label: "Sides", href: "/menus/sides" },
-    { label: "Cold Drinks", href: "/menus/coldDrinks" },
-    { label: "Hot Drinks", href: "/menus/hotDrinks" },
-    { label: "Desserts", href: "/menus/desserts" },
-    { label: "Milkshakes", href: "/menus/milkshakes" },
+    { label: t("all"), href: "/menus/all" },
+    { label: t("Pizzas"), href: "/menus/pizzas" },
+    { label: t("Sides"), href: "/menus/sides" },
+    { label: t("Drinks"), href: "/menus/coldDrinks" },
+    { label: t("Coffees"), href: "/menus/hotDrinks" },
+    { label: t("Desserts"), href: "/menus/desserts" },
+    { label: t("Milkshakes"), href: "/menus/milkshakes" },
   ];
 
   return (
@@ -26,17 +28,21 @@ const MenuLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="px-5 sm:px-15 md:px-30 w-full pt-30">
         <ul className="flex gap-8.5 overflow-x-scroll 2xl:overflow-x-hidden pb-3 2xl:pb-0">
           {categories.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname!.endsWith(item.href);
 
             return (
               <Link
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className={`
                   flex items-center transition-all
                   text-sm shadow-sm border border-neutral-300 rounded-full
                   hover:bg-[#A04501] hover:text-white
-                  ${isActive ? "bg-[#A04501] text-sm items-center rounded-full text-white" : "bg-transparent text-black"}
+                  ${
+                    isActive
+                      ? "bg-[#A04501] text-sm items-center rounded-full text-white"
+                      : "bg-transparent text-black"
+                  }
                 `}
               >
                 <li className="py-1 px-10 gap-3 flex items-center justify-around">

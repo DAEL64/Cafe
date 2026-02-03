@@ -1,30 +1,20 @@
 import { menuData } from "@/data/menuData";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Cormorant_Garamond } from "next/font/google";
-
+import { useTranslations } from "next-intl"; // 1. Import hook
 import MainBackground from "@/components/Main-background";
-
 import { ArrowRight } from "lucide-react";
-
 import Styles from "@/styles/Main.module.css";
 
+// Updated font to include Georgian subset
 const CormorantGaramond = Cormorant_Garamond({
-  subsets: ["latin"],
+  subsets: ["latin"], 
 });
 
 const MainPage = () => {
+  const t = useTranslations("Menu"); 
   const { menu } = menuData;
-
-  const categoryLabels: Record<string, string> = {
-    Pizzas: "Pizzas",
-    Sides: "Sides",
-    Coffees: "Hot Drinks",
-    Drinks: "Cold Drinks",
-    Desserts: "Desserts",
-    Milkshakes: "Milkshakes",
-  };
 
   return (
     <>
@@ -34,8 +24,8 @@ const MainPage = () => {
           className={`${CormorantGaramond.className} pt-20 flex flex-col items-center justify-center w-full`}
         >
           <header className="text-[30px] sm:text-[64px] flex flex-col items-center text-center leading-tight pb-10">
-            <span>Discover</span>
-            <span>Our Dining Menu</span>
+            <span>{t("discover")}</span>
+            <span>{t("title")}</span>
           </header>
 
           {Object.entries(menu).map(([key, items]) => (
@@ -43,20 +33,21 @@ const MainPage = () => {
               <div className={`${Styles.sectionHeader} flex justify-center`}>
                 <div className="w-full pt-20 px-5 sm:px-10 md:px-20 lg:px-32 flex items-center justify-between">
                   <span className="text-[40px] sm:text-[50px] pb-4">
-                    {categoryLabels[key]}
+                    {t(`categories.${key}`)}
                   </span>
                   <Link
                     href="/menus/all"
                     className="cursor-pointer hover:underline flex items-center gap-1 text-lg group transition-all"
                   >
-                    see more
+                    {t("see_more")}
                     <ArrowRight className="w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
+              
               <div className="relative opacity-30 italic w-full text-[200px] text-gray-300 font-bold">
                 <span className="absolute lg:block hidden -top-50 right-1/10">
-                  {categoryLabels[key]}
+                   {t(`categories.${key}`)}
                 </span>
               </div>
 
@@ -109,7 +100,7 @@ const MainPage = () => {
                     <div className="hidden lg:flex lg:absolute lg:-left-60 xl:-left-80 bottom-1/4 lg:col-span-2 lg:col-start-6 lg:row-start-1 items-start pt-60 justify-center z-10">
                       <div className="p-4 text-center border-y border-[#C5A02E]/30">
                         <span className="block font-sans text-[11px] tracking-[0.3em] uppercase text-[#1A1A1A]/60 mb-2">
-                          Curated
+                          {t("curated")}
                         </span>
                         <div className="w-px h-12 bg-[#C5A02E] mx-auto mb-2" />
                         <span className="italic text-[#C5A02E] text-xl">&</span>
@@ -200,13 +191,13 @@ const MainPage = () => {
                     <div className="hidden lg:flex lg:col-span-4 lg:col-start-8 lg:row-start-1 pt-40 px-8">
                       <div className="space-y-6">
                         <p className="text-[#1A1A1A]/60 italic text-xl leading-relaxed border-l-2 border-[#C5A02E] pl-6">
-                          Our {key.toLowerCase()} are curated to evoke a sense
-                          of home, reimagined through modern technique and local
-                          sourcing.
+                          {t("description_template", {
+                            category: t(`categories.${key}`).toLowerCase(),
+                          })}
                         </p>
                         <div className="flex items-center gap-4 text-[#C5A02E]">
                           <span className="text-[10px] uppercase tracking-widest font-sans font-bold">
-                            Signature
+                            {t("signature")}
                           </span>
                           <div className="w-12 h-px bg-[#C5A02E]" />
                         </div>
