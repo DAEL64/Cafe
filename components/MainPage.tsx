@@ -47,15 +47,14 @@ const MainPage = () => {
                 </div>
               </div>
 
-              <div className="relative opacity-10 italic w-full text-[150px] lg:text-[200px] text-gray-300 font-bold overflow-hidden h-40">
-                <span className="absolute lg:block hidden -top-10 right-1/10 whitespace-nowrap">
+              <div className="relative lg:block opacity-40 hidden italic w-full text-[150px] lg:text-[200px] text-gray-300 font-bold h-fit">
+                <span className="absolute -top-45 right-1/9 whitespace-nowrap">
                   {t(`categories.${key}`)}
                 </span>
               </div>
 
               <div className="w-full px-5 sm:px-10 md:px-20 lg:px-32 mx-auto relative">
                 <div className="flex flex-col lg:block relative">
-                  {/* First Item Block */}
                   <div className="lg:w-[70%] mb-10 lg:mb-0">
                     {items.slice(1, 2).map((item, index) => (
                       <div
