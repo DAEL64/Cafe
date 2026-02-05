@@ -24,7 +24,7 @@ const MainBackground = () => {
         priority
         className="z-10 absolute top-0 w-full h-screen object-cover brightness-80"
       />
-      <div className="absolute flex flex-col z-50 items-center gap-15 top-50">
+      <div className="absolute flex flex-col z-50 items-center gap-5 xl:gap-15 top-50">
         <div className="flex flex-col justify-between items-center text-center">
           <div className="flex justify-center items-center text-white w-fit border border-white/20 bg-white/10 p-2 px-4 rounded-full mb-6">
             <span className="flex items-center gap-2 text-sm">
